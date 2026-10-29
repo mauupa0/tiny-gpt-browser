@@ -1,0 +1,124 @@
+.atlas {
+  display: grid;
+  gap: 20px;
+}
+.reach-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  color: var(--ink-2);
+}
+.reach-legend .lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-data);
+  font-size: 0.75rem;
+}
+.reach-legend i {
+  width: 14px;
+  height: 8px;
+  display: inline-block;
+}
+.atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 28px) clamp(12px, 1.8vw, 24px);
+}
+.head {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-width: 0;
+}
+.head figcaption {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.head figcaption b {
+  color: var(--ink);
+  font-weight: 500;
+}
+.head.best figcaption span {
+  color: var(--marker);
+}
+.map {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--ground-deep);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.map canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  touch-action: pan-y;
+  cursor: crosshair;
+}
+.map .last-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 1px var(--marker);
+  pointer-events: none;
+  min-height: 3px;
+}
+.map .hair {
+  position: absolute;
+  background: oklch(0.95 0.014 95 / 0.55);
+  pointer-events: none;
+}
+.map .hair.h {
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.map .hair.v {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+.fp {
+  display: flex;
+  gap: 1px;
+  height: 8px;
+}
+.fp i {
+  display: block;
+  flex-basis: 0;
+  min-width: 2px;
+}
+.hloss {
+  color: var(--ink-3);
+}
+.hloss .num {
+  color: var(--ink-2);
+}
+.readout {
+  min-height: 1.5em;
+  color: var(--ink-2);
+}
+.finding {
+  max-width: 44rem;
+  font: 400 1.125rem/1.5 var(--font-serif);
+  color: var(--ink);
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .atlas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

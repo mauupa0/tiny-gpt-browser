@@ -1,0 +1,60 @@
+{
+ "float32": {
+  "tolerance": 0.001,
+  "worstLogitDiff": 0.0000057220458984375,
+  "cases": {
+   "short": {
+    "maxLogit": 0.0000057220458984375,
+    "maxAttn": 0,
+    "tokens": 21
+   },
+   "verse": {
+    "maxLogit": 0.0000057220458984375,
+    "maxAttn": 9.238719940185547e-7,
+    "tokens": 50
+   },
+   "single": {
+    "maxLogit": 0.0000019073486328125,
+    "maxAttn": 0,
+    "tokens": 1
+   },
+   "full_ctx": {
+    "maxLogit": 0.0000057220458984375,
+    "maxAttn": 0,
+    "tokens": 128
+   }
+  }
+ },
+ "float16": {
+  "tolerance": 0.001,
+  "worstLogitDiff": 0.00000667572021484375,
+  "cases": {
+   "short": {
+    "maxLogit": 0.00000476837158203125,
+    "maxAttn": 0,
+    "tokens": 21
+   },
+   "verse": {
+    "maxLogit": 0.0000057220458984375,
+    "maxAttn": 9.238719940185547e-7,
+    "tokens": 50
+   },
+   "single": {
+    "maxLogit": 0.0000011920928955078125,
+    "maxAttn": 0,
+    "tokens": 1
+   },
+   "full_ctx": {
+    "maxLogit": 0.00000667572021484375,
+    "maxAttn": 0,
+    "tokens": 128
+   }
+  }
+ },
+ "fault_scale": {
+  "worstLogitDiff": 7.169919490814209
+ },
+ "fault_mask": {
+  "worstLogitDiff": 3.149825096130371
+ }
+}

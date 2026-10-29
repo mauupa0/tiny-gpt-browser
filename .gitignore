@@ -1,0 +1,8 @@
+node_modules
+dist
+.vercel
+.venv
+__pycache__
+*.pyc
+train/out/*.pt
+.DS_Store

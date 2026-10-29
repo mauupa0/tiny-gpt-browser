@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Newsreader";
+  src: url("/fonts/newsreader.woff2") format("woff2");
+  font-weight: 400 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("/fonts/schibsted.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Martian Mono";
+  src: url("/fonts/martian-mono.woff2") format("woff2");
+  font-weight: 300 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader Fallback";
+  src: local("Georgia");
+  size-adjust: 93%;
+}
+@font-face {
+  font-family: "Schibsted Fallback";
+  src: local("Arial");
+  size-adjust: 103%;
+}
+
+:root {
+  --font-serif: "Newsreader", "Newsreader Fallback", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-ui: "Schibsted Grotesk", "Schibsted Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "Martian Mono", ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
+
+  --ground: oklch(0.26 0.085 262);
+  --ground-deep: oklch(0.2 0.07 262);
+  --panel: oklch(0.295 0.088 262);
+  --ink: oklch(0.95 0.014 95);
+  --ink-2: oklch(0.82 0.035 250);
+  --ink-3: oklch(0.72 0.045 250);
+  --marker: oklch(0.78 0.14 55);
+  --cool: oklch(0.82 0.085 215);
+  --line: oklch(0.95 0.014 95 / 0.16);
+  --line-2: oklch(0.95 0.014 95 / 0.32);
+  --grid-minor: oklch(0.95 0.014 95 / 0.028);
+  --grid-major: oklch(0.95 0.014 95 / 0.05);
+
+  --ramp-0: oklch(0.34 0.1 264);
+  --ramp-1: oklch(0.44 0.13 263);
+  --ramp-2: oklch(0.55 0.14 260);
+  --ramp-3: oklch(0.66 0.12 256);
+  --ramp-4: oklch(0.76 0.09 250);
+  --ramp-5: oklch(0.87 0.05 245);
+  --ramp-6: oklch(0.96 0.015 240);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --page: 1240px;
+  --radius: 3px;
+
+  color-scheme: dark;
+}

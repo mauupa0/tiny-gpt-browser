@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tiny GPT, a transformer you can open</title>
+    <meta name="description" content="A 1.8M-parameter transformer trained from scratch on Pan Tadeusz. It writes Polish verse in your browser with hand-written inference code, and every attention head, neuron and logit it computes is on the page." />
+    <meta name="theme-color" content="#0b214c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tiny GPT, a transformer you can open" />
+    <meta property="og:description" content="1,818,048 parameters, trained on one Polish poem, running in the browser. Click a letter and see everything the model computed for it." />
+    <meta property="og:image" content="https://tiny-gpt-oktawian.vercel.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Tiny GPT page: five lines of Polish verse written by the model, the eight letters it weighed for the next one drawn as bars, and the Write again button." />
+    <meta property="og:url" content="https://tiny-gpt-oktawian.vercel.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tiny GPT, a transformer you can open" />
+    <meta name="twitter:description" content="1,818,048 parameters, trained on one Polish poem, running in the browser. Click a letter and see everything the model computed for it." />
+    <meta name="twitter:image" content="https://tiny-gpt-oktawian.vercel.app/og.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/schibsted.woff2" as="font" type="font/woff2" crossorigin />
+    <style>html{background:#0b214c;color-scheme:dark}</style>
+    <script>
+      // The page is readable as HTML before the app script arrives. If that script fails to load,
+      // try once more under another URL (a failed module is cached per URL), then say so.
+      document.addEventListener(
+        "error",
+        function (e) {
+          var t = e.target;
+          if (!t || t.tagName !== "SCRIPT" || !t.src) return;
+          if (t.src.indexOf("retry=1") < 0) {
+            var n = document.createElement("script");
+            n.type = "module";
+            n.src = t.src + "?retry=1";
+            document.body.appendChild(n);
+            return;
+          }
+          var s = document.querySelector(".status");
+          if (s) s.innerHTML = 'The page script did not load. <a href="">Reload the page</a>';
+        },
+        true
+      );
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
